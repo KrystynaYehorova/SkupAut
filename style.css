@@ -1,0 +1,213 @@
+:root {
+  --color-main-light: #f4f4ea;
+  --color-main-dark: #31261a;
+  --color-main-green: #819b57;
+}
+@media (max-width: 1000px) {
+  .container-form,
+  .section-credit div {
+    flex-wrap: wrap !important;
+  }
+}
+@media (max-width: 560px) {
+  h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h1 span {
+    color: var(--color-main-light) !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  .footer-section div {
+    flex-wrap: wrap;
+  }
+}
+main {
+  background-image: linear-gradient(
+      to left,
+      rgba(41, 39, 39, 0.1),
+      rgba(38, 37, 37, 0.7)
+    ),
+    url(img/alfa-romeo-7968027_1280.jpg);
+
+  background-size: cover; /* Dopasowanie zdjęcia, aby pokryło całe tło */
+  background-position: center;
+
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+header {
+  position: relative; /* Ustawienie pozycji na relative, aby można było zastosować z-index */
+  z-index: 1; /* Ustawienie z-index na 1, aby nagłówek znajdował się nad tłem */
+}
+.navbar {
+  background-color: transparent !important; /* Ustawienie tła nawigacji jako przezroczystego */
+}
+.navbar-nav {
+  padding-left: 100px;
+  gap: 40px;
+}
+.nav-link {
+  color: var(--color-main-light);
+  font-size: 24px;
+}
+.nav-link:hover {
+  color: var(--color-main-green);
+}
+.navbar-toggler-icon {
+  background-color: var(--color-main-light);
+  border-radius: 5px;
+}
+.button-wycena {
+  width: 250px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  margin: 20px;
+  color: var(--color-main-light);
+  background-color: var(--color-main-green);
+}
+.button-wycena:hover {
+  background-color: var(--color-main-light);
+  color: var(--color-main-green);
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  font-size: 130px;
+  font-weight: 700;
+  color: var(--color-main-light);
+}
+h1 span {
+  color: var(--color-main-dark);
+}
+body {
+  background-color: var(--color-main-light);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--color-main-dark);
+}
+.section-hero {
+  height: 600px;
+  color: var(--color-main-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 50px;
+  background-color: var(--color-main-green);
+  color: var(--color-main-light);
+}
+.container-about,
+.container-zlom {
+  text-align: center;
+}
+.p-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.p-about p {
+  width: 1100px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.container-form {
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.form-select,
+.form-control {
+  height: 50px;
+  color: var(--color-main-dark);
+}
+.form-car {
+  max-width: 750px;
+  border: 5px solid var(--color-main-green);
+  padding: 15px;
+  border-radius: 25px;
+}
+.form-car:hover {
+  background-color: #f5f5f5;
+}
+.form-check-input:checked {
+  background-color: var(--color-main-green);
+  border-color: var(--color-main-green);
+}
+.btn {
+  width: 250px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 15px;
+  margin: 20px;
+  color: var(--color-main-light);
+  background-color: var(--color-main-green);
+}
+.container-form img {
+  border: 5px solid var(--color-main-green);
+  border-radius: 25px;
+  height: 608px;
+}
+
+.container-zlom img {
+  border: 5px solid var(--color-main-green);
+  border-radius: 25px;
+  height: 608px;
+  width: 501.16px;
+}
+.container-zlom p {
+  margin-top: 40px;
+}
+.section-credit {
+  text-align: center;
+}
+.section-credit div {
+  display: flex;
+  gap: 40px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.section-credit div img {
+  width: 50%;
+  border: 5px solid var(--color-main-green);
+  border-radius: 25px;
+}
+.credit-p {
+  height: 310px;
+  border: 5px solid var(--color-main-green);
+  border-radius: 25px;
+  padding: 0px 10px 0px 10px;
+}
+.footer-section {
+  padding-top: 10px;
+  text-align: center;
+  color: var(--color-main-light);
+  background-color: var(--color-main-dark);
+}
+.footer-section div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-section div a {
+  color: var(--color-main-light);
+}
+.footer-section div a:hover {
+  font-size: 20px;
+}
