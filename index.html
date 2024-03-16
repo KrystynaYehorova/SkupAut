@@ -93,151 +93,165 @@
       <div class="container-form">
         <div class="form-car">
           <h3>Skup aut sprawnych</h3>
-          <div class="row g-3">
-            <div class="col">
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                title="Wybierz markę pojazdu"
-              >
-                <option selected>Wybierz markę pojazdu</option>
-                <option value="1">Audi</option>
-                <option value="2">Alfa Romeo</option>
-                <option value="3">BMW</option>
-                <option value="4">Cadillac</option>
-                <option value="5">Chevrolet</option>
-                <option value="6">Citroën</option>
-                <option value="7">Dacia</option>
-                <option value="8">Ferrari</option>
-                <option value="9">Fiat</option>
-                <option value="10">Ford</option>
-                <option value="11">Honda</option>
-                <option value="12">Hyundai</option>
-                <option value="13">Jaguar</option>
-                <option value="14">Jeep</option>
-                <option value="15">Kia</option>
-                <option value="16">Land Rover</option>
-                <option value="17">Lexus</option>
-                <option value="18">Maserati</option>
-                <option value="19">Mazda</option>
-                <option value="20">Mercedes-Benz</option>
-                <option value="21">Mini</option>
-                <option value="22">Mitsubishi</option>
-                <option value="23">Nissan</option>
-                <option value="24">Opel</option>
-                <option value="25">Peugeot</option>
-                <option value="26">Porsche</option>
-                <option value="27">Renault</option>
-                <option value="28">Seat</option>
-                <option value="29">Skoda</option>
-                <option value="30">Subaru</option>
-                <option value="31">Suzuki</option>
-                <option value="32">Tesla</option>
-                <option value="33">Toyota</option>
-                <option value="34">Volkswagen (VW)</option>
-                <option value="35">Volvo</option>
-                <option value="36">Inna</option>
-              </select>
+          <form
+            action="send_email.php"
+            method="post"
+            enctype="multipart/form-data"
+            accept="image/*"
+          >
+            <div class="row g-3">
+              <div class="col">
+                <select
+                  class="form-select"
+                  aria-label="Default select
+      example"
+                  name="marka"
+                >
+                  <option selected>Wybierz markę pojazdu</option>
+                  <option value="1">Audi</option>
+                  <option value="2">Alfa Romeo</option>
+                  <option value="3">BMW</option>
+                  <option value="4">Cadillac</option>
+                  <option value="5">Chevrolet</option>
+                  <option value="6">Citroën</option>
+                  <option value="7">Dacia</option>
+                  <option value="8">Ferrari</option>
+                  <option value="9">Fiat</option>
+                  <option value="10">Ford</option>
+                  <option value="11">Honda</option>
+                  <option value="12">Hyundai</option>
+                  <option value="13">Jaguar</option>
+                  <option value="14">Jeep</option>
+                  <option value="15">Kia</option>
+                  <option value="16">Land Rover</option>
+                  <option value="17">Lexus</option>
+                  <option value="18">Maserati</option>
+                  <option value="19">Mazda</option>
+                  <option value="20">Mercedes-Benz</option>
+                  <option value="21">Mini</option>
+                  <option value="22">Mitsubishi</option>
+                  <option value="23">Nissan</option>
+                  <option value="24">Opel</option>
+                  <option value="25">Peugeot</option>
+                  <option value="26">Porsche</option>
+                  <option value="27">Renault</option>
+                  <option value="28">Seat</option>
+                  <option value="29">Skoda</option>
+                  <option value="30">Subaru</option>
+                  <option value="31">Suzuki</option>
+                  <option value="32">Tesla</option>
+                  <option value="33">Toyota</option>
+                  <option value="34">Volkswagen (VW)</option>
+                  <option value="35">Volvo</option>
+                  <option value="36">Inna</option>
+                </select>
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Wpisz model pojazdu"
+                  aria-label="Wpisz model pojazdu"
+                  name="model"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Wpisz rok produkcji"
+                  aria-label="Wpisz rok produkcji"
+                  name="rok"
+                />
+              </div>
             </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Wpisz model pojazdu"
-                aria-label="Wpisz model pojazdu"
-                title="Wpisz model pojazdu"
-              />
+            <div class="row g-3">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Wpisz przebieg pojazdu"
+                  aria-label="Wpisz przebieg pojazdu"
+                  name="przebieg"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Jaką cenę proponujesz?"
+                  aria-label="Jaką cenę proponujesz?"
+                  name="cena"
+                />
+              </div>
             </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Wpisz rok produkcji"
-                aria-label="Wpisz rok produkcji"
-                title="Wpisz rok produkcji"
-              />
+            <div class="row g-3">
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="ubezpieczenie"
+                  name="ubezpieczenie"
+                  checked
+                />
+                <label class="form-check-label" for="przeglad"
+                  >Odznacz, jeśli pojazd posiada ubezpieczenie</label
+                >
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="przeglad"
+                  name="przeglad"
+                  checked
+                />
+                <label class="form-check-label" for="przeglad"
+                  >Odznacz, jeśli pojazd posiada aktualny przegląd</label
+                >
+              </div>
             </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Wpisz przebieg pojazdu"
-                aria-label="Wpisz przebieg pojazdu"
-                title="Wpisz przebieg pojazdu"
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Jaką cenę proponujesz?"
-                aria-label="Jaką cenę proponujesz?"
-                title="Jaką cenę proponujesz?"
-              />
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckChecked"
-                checked
-              />
-              <label class="form-check-label" for="flexSwitchCheckChecked"
-                >Odznacz, jeśli pojazd posiada ubezpieczenie</label
-              >
-            </div>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckChecked"
-                checked
-              />
-              <label class="form-check-label" for="flexSwitchCheckChecked"
-                >Odznacz, jeśli pojazd posiada aktualny przegląd</label
-              >
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="formFileMultiple" class="form-label"
-              >Załącz zdjęcia</label
-            >
-            <input
-              class="form-control"
-              type="file"
-              id="formFileMultiple"
-              multiple
-              title="Załącz zdjęcia"
-            />
-          </div>
-          <div class="row g-3">
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Dodatkowy opis pojazdu...</label
+              <label for="formFileMultiple" class="form-label"
+                >Załącz zdjęcia</label
               >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="3"
-              ></textarea>
-            </div>
-            <div class="col">
               <input
-                type="text"
                 class="form-control"
-                placeholder="Podaj dane kontaktowe (numer telefonu/email)"
-                aria-label="Podaj dane kontaktowe (numer telefonu/email)"
-                title="Podaj dane kontaktowe (numer telefonu/email)"
+                type="file"
+                id="formFileMultiple"
+                name="images[]"
+                multiple
               />
             </div>
-          </div>
-          <button type="button" class="btn btn-dark">Wyślij</button>
+            <div class="row g-3">
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Dodatkowy opis pojazdu...</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="opis"
+                ></textarea>
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Podaj dane kontaktowe (numer
+      telefonu/email)"
+                  aria-label="Podaj dane kontaktowe (numer
+      telefonu/email)"
+                  name="kontakt"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-dark">Wyślij</button>
+          </form>
         </div>
 
         <img src="img/key-408538_1280.jpg" alt="photo key" />
